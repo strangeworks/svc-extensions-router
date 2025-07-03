@@ -1,0 +1,15 @@
+[project]
+name = "svc-extensions-proxy"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13.2"
+dependencies = [
+    "uvicorn>=0.35.0",
+]
+
+
+[[tool.uv.index]]
+name = "gcp"
+url = "https://us-central1-python.pkg.dev/strangeworks-apps/apps-pypi/simple/"
+
