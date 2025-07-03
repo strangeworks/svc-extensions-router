@@ -8,14 +8,17 @@ app = FastAPI()
 
 @app.post("/proxy")
 async def controller(request: Request):
+    content = await request.json()
+    headers: dict = {}
+    for k, v in request.headers.items():
+        headers[k] = v
     return JSONResponse(
         content={
-            "body": await request.body(),
-            "headers": request.headers,
+            "body": content,
+            "headers": headers,
             "method": request.method,
         },
         status_code=200,
-        headers=request.headers,
     )
 
 
