@@ -1,10 +1,11 @@
 [project]
-name = "svc-extensions-proxy"
+name = "svc-extensions-router"
 version = "0.1.0"
-description = "Add your description here"
+description = "Router for SDK Extensions (byok) requests"
 readme = "README.md"
 requires-python = ">=3.13.2"
 dependencies = [
+    "fastapi>=0.115.14",
     "uvicorn>=0.35.0",
 ]
 
